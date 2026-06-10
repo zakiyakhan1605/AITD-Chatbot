@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITD Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    
+    <div class="w-full max-w-2xl mx-auto bg-grey rounded-xl shadow-lg flex flex-col h-[90vh]">
+        <div class="px-6 py-4 border-b border-black-200 flex items-center justify-center space-x-2 bg-blue-500">
+            <img src="aitd logo (2).png" alt="aitd logo" class="h-20 w-20">
+            <div>
+                <h1 class="text-xl font-bold bg-blue">AITD-ASSISTENT</h1>
+                <p class="text-sm text-white-500">Your AI AITD-ASSISTENT</p>
+            </div>
+        </div>
+        
+        <div id="chat-messages" class="flex-1 p-6 space-y-4 overflow-y-auto chat-container">
+            <div class="chat-message bot rounded-xl p-3 max-w-[80%] shadow-sm">
+                Hello! I am here to help you regarding the AITD Instituate, **AITD-ASSISTENT**. You can ask regarding the queries related to Branch,fees etc.         </div>
+        </div>
+
+        <div class="p-4 border-t border-gray-200">
+            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                <button id="vaccination-btn" class="w-full sm:w-1/2 bg-blue-500 text-gray-800 rounded-full px-4 py-2 text-sm shadow-md hover:bg-gray-300 transition-colors duration-200">
+                    Check Number of Branch
+                </button>
+                <button id="outbreak-btn" class="w-full sm:w-1/2 bg-blue-500 text-gray-800 rounded-full px-4 py-2 text-sm shadow-md hover:bg-gray-300 transition-colors duration-200">
+                    Check Fee Structure
+                </button>
+            </div>
+            <div class="flex items-center">
+                <input id="user-input" type="text" placeholder="Type your question here..." class="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+               <button id="mic-btn" class="bg-blue-500 text-white rounded-full p-2.5 shadow-md hover:bg-blue-600 transition-colors duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                    </svg>
+                </button>
+                <button id="send-btn" class="bg-blue-500 text-white rounded-full p-2 shadow-md hover:bg-blue-600 transition-colors duration-200">
+                   <!--- <span id="send-text">Send</span>-->
+                    <svg id="send-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                    <span id="loading-dots" class="hidden loading-dots">
+                        <span class="inline-block w-2 h-2 mx-0.5 rounded-full bg-white"></span>
+                        <span class="inline-block w-2 h-2 mx-0.5 rounded-full bg-white"></span>
+                        <span class="inline-block w-2 h-2 mx-0.5 rounded-full bg-white"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

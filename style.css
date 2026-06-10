@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(231, 213, 213);
+    color: #3D405B;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%234CAF50' fill-opacity='0.1'%3E%3Cpath d='M16 0h4v40h-4V0zm12 16h-4v4h-4v-4h-4v-4h4v-4h4v4h4v4h-4v4zm0 8h-4v4h-4v-4h-4v-4h4v-4h4v4h4v4z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80px 80px;
+}
+.chat-container {
+    max-height: 80vh;
+}
+.chat-message.user {
+    background-color: #6b82d6;
+    color: #FFFFFF;
+    align-self: end;
+    border-bottom-right-radius: 0;
+}
+.chat-message.bot {
+    background-color: #E0E0E0;
+    color: #3D405B;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+.loading-dots span {
+    animation: bounce 1.4s infinite ease-in-out;
+    animation-fill-mode: both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
